@@ -18,10 +18,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: akhileshns/heroku-deploy@v3.12.12
-          with:
-            heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-            heroku_app_name: "matthieucmp/jokes-app" #Must be unique in Heroku
-            heroku_email: "campagne.matthieu@gmail.com"
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "matthieucmp/jokes-app" #Must be unique in Heroku
+          heroku_email: "campagne.matthieu@gmail.com"
 
 
     #55420263-8503-42c0-aa36-5dbf7ff5a9f6
