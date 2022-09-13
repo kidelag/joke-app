@@ -1,0 +1,15 @@
+name: Test workflow
+on:
+  push:
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest #we can use windows / linux or macos
+    steps:
+      - uses: actions/checkout@v3 #https://github.com/marketplace/actions/checkout
+      - uses: actions/setup-node@v3 #https://github.com/marketplace/actions/setup-node-js-environment
+        with:
+          node-version: 16
+      - run: npm ci #clean install (package-lock.json)
+      - run: npm run build
+      - run: npm test #launch unit tests
